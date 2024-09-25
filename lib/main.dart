@@ -42,7 +42,7 @@ class _WeatherHomeState extends State<WeatherHome> {
 
 
       List<String> conditions = ['Sunny', 'Cloudy', 'Rainy'];
-      _weatherCondition = 'Sunny'; // Placeholder for fetched condition
+      _weatherCondition = conditions[random.nextInt(3)]; // Placeholder for fetched condition
     });
   }
 
