@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,13 @@ class _WeatherHomeState extends State<WeatherHome> {
     // Simulating fetching weather data. Replace with your logic.
     setState(() {
       _cityName = _cityController.text;
-      _temperature = '25°C'; // Placeholder for fetched temperature
+
+      Random random = Random();
+      int temp = 15 + random.nextInt(16); // Generates a number between 15 and 30
+      _temperature = '$temp°C';
+
+
+      List<String> conditions = ['Sunny', 'Cloudy', 'Rainy'];
       _weatherCondition = 'Sunny'; // Placeholder for fetched condition
     });
   }
